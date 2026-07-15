@@ -79,7 +79,7 @@ function ServiceDetail() {
           <div className="md:col-span-6">
             <div className="eyebrow text-accent">Benefits</div>
             <ul className="mt-8 divide-y divide-line border-y border-line">
-              {service.benefits.map((b) => (
+              {service.benefits.map((b: string) => (
                 <li key={b} className="flex items-baseline gap-4 py-4">
                   <span className="text-accent font-mono text-xs">◆</span>
                   <span className="text-ink">{b}</span>
@@ -90,7 +90,7 @@ function ServiceDetail() {
           <div className="md:col-span-6">
             <div className="eyebrow text-accent">Applications</div>
             <ul className="mt-8 divide-y divide-line border-y border-line">
-              {service.applications.map((a) => (
+              {service.applications.map((a: string) => (
                 <li key={a} className="flex items-baseline gap-4 py-4">
                   <span className="text-accent font-mono text-xs">◇</span>
                   <span className="text-ink">{a}</span>

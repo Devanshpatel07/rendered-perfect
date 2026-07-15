@@ -94,7 +94,7 @@ function ProjectDetail() {
             <div>
               <div className="eyebrow text-accent">Materials</div>
               <ul className="mt-3 space-y-1 text-muted-foreground">
-                {project.materials.map((m) => (<li key={m}>{m}</li>))}
+                {project.materials.map((m: string) => (<li key={m}>{m}</li>))}
               </ul>
             </div>
           </aside>
@@ -147,7 +147,7 @@ function ProjectDetail() {
             <Link to="/projects" className="eyebrow text-ink link-underline">All →</Link>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {related.map((r) => (
+            {related.map((r: typeof projects[number]) => (
               <Link key={r.slug} to="/projects/$slug" params={{ slug: r.slug }} className="hover-image group">
                 <div className="aspect-[4/5] overflow-hidden bg-surface-2">
                   <img src={covers[r.cover]} alt={r.title} className="h-full w-full object-cover" loading="lazy" />
