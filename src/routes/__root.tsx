@@ -78,17 +78,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Everest Rendering — Premium Acrylic, Cement & Texture Rendering, Australia" },
+      { title: "Everest Rendering — Premium Rendering, Australia" },
       {
         name: "description",
         content:
-          "Everest Rendering Services delivers premium acrylic, cement, texture and foam-panel rendering for luxury residential and commercial projects across Melbourne, Sydney and Australia.",
+          "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia.",
       },
       { name: "author", content: "Everest Rendering Services Pty Ltd" },
       { property: "og:site_name", content: "Everest Rendering Services" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#faf7f2" },
+      { property: "og:title", content: "Everest Rendering — Premium Rendering, Australia" },
+      { name: "twitter:title", content: "Everest Rendering — Premium Rendering, Australia" },
+      { property: "og:description", content: "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia." },
+      { name: "twitter:description", content: "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bcb54e3c-78e8-4778-8201-f69f80282642/id-preview-86d0a86b--e8855355-7ed0-432c-ad0c-d4261e2c45ec.lovable.app-1784146459944.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bcb54e3c-78e8-4778-8201-f69f80282642/id-preview-86d0a86b--e8855355-7ed0-432c-ad0c-d4261e2c45ec.lovable.app-1784146459944.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

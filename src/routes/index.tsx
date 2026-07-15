@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
           "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia.",
       },
       { property: "og:title", content: "Everest Rendering — Premium Rendering, Australia" },
-      { property: "og:description", content: "Handcrafted rendered facades. 18+ years, 1,200+ projects." },
+      { property: "og:description", content: "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
