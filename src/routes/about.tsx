@@ -38,14 +38,14 @@ function AboutPage() {
     <>
       <section className="pt-40 pb-20 md:pt-52 md:pb-32">
         <div className="container-page">
-          <div className="eyebrow text-accent">About the studio</div>
+          <div className="eyebrow text-accent">About the company</div>
           <h1 className="mt-6 font-display font-light text-[clamp(2.5rem,6vw,5.5rem)] leading-[0.98] tracking-tightest text-ink max-w-4xl">
-            A family rendering studio, working at the level of the architects we serve.
+            Professional rendering contractors, bringing architectural concepts to life.
           </h1>
           <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Everest was founded in 2007 by Deepak Adhikari, after fifteen years on the trowels of Melbourne's
-            most demanding architectural builders. What began as a two-person operation is now a thirty-strong
-            studio with foremen in Melbourne and Sydney — still owner-operated, still on the tools.
+            At Everest Rendering Services, we specialise in acrylic-based renders, cement rendering,
+            texture finishes and blue board texture finishes. Every project — from a single feature wall
+            to a full facade — is executed with the highest level of craftsmanship and attention to detail.
           </p>
         </div>
       </section>
@@ -61,19 +61,19 @@ function AboutPage() {
           <div className="md:col-span-4">
             <div className="eyebrow text-accent">Mission</div>
             <p className="mt-6 font-display text-2xl tracking-tighter text-ink leading-snug">
-              To bring gallery-grade craftsmanship to every facade we touch — residential or commercial, big or small.
+              To deliver durable, aesthetically striking rendered finishes tailored to every client's brief.
             </p>
           </div>
           <div className="md:col-span-4">
-            <div className="eyebrow text-accent">Vision</div>
+            <div className="eyebrow text-accent">Approach</div>
             <p className="mt-6 font-display text-2xl tracking-tighter text-ink leading-snug">
-              To be the studio Australian architects specify by name — the trusted last mile of every considered build.
+              A skilled, trained team applying premium-grade materials with the care every home deserves.
             </p>
           </div>
           <div className="md:col-span-4">
-            <div className="eyebrow text-accent">Experience</div>
+            <div className="eyebrow text-accent">Coverage</div>
             <p className="mt-6 font-display text-2xl tracking-tighter text-ink leading-snug">
-              1,200+ completed facades. 120+ suburbs. Eighteen years of continuous operation without a single unpaid warranty claim.
+              Based in Southport on the Gold Coast, serving projects across South East Queensland.
             </p>
           </div>
         </div>
