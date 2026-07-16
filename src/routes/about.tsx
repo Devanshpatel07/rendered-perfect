@@ -8,9 +8,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Everest Rendering Services" },
-      { name: "description", content: "Family-run Australian rendering studio. Eighteen years, 1,200+ facades, in-house crews only." },
-      { property: "og:title", content: "About — Everest Rendering" },
-      { property: "og:description", content: "Family-run Australian rendering studio, eighteen years of craft." },
+      { name: "description", content: "QBCC-licensed rendering contractors based on the Gold Coast. Specialists in acrylic, cement, texture and blue board finishes across South East Queensland." },
+      { property: "og:title", content: "About — Everest Rendering Services" },
+      { property: "og:description", content: "QBCC-licensed rendering contractors based on the Gold Coast, Queensland." },
       { property: "og:url", content: "/about" },
       { property: "og:image", content: teamOnsite },
     ],
@@ -19,18 +19,18 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const team = [
-  { name: "Deepak Adhikari", role: "Founder & Master Renderer", years: "22 yrs" },
-  { name: "Sarah Whitmore", role: "Studio Director", years: "12 yrs" },
-  { name: "Marco Bianchi", role: "Site Foreman, Melbourne", years: "15 yrs" },
-  { name: "Jason Truong", role: "Site Foreman, Sydney", years: "11 yrs" },
+const highlights = [
+  { h: "QBCC licensed", b: "Fully licensed and insured to operate as rendering contractors in Queensland." },
+  { h: "Premium materials", b: "Only premium-grade acrylic, cement and texture systems selected for Australian conditions." },
+  { h: "Trained applicators", b: "Ongoing training keeps our team across current techniques and manufacturer standards." },
+  { h: "Flexible scheduling", b: "We work around your build programme — with prompt communication from first call to handover." },
 ];
 
 const values = [
-  { h: "Craft over speed", b: "We say no to projects that can't be done properly. Every time." },
-  { h: "Own the outcome", b: "Ten-year workmanship guarantee. No fine print, no wriggle room." },
-  { h: "Show the work", b: "Our schedule of mixes and products is documented and handed over on completion." },
-  { h: "Respect the site", b: "Cleaner at handover than at start. Neighbours matter." },
+  { h: "Craft over speed", b: "We take the time each finish needs to be done properly. Every surface, every corner." },
+  { h: "Clear communication", b: "Prompt replies, honest timelines, and one direct point of contact throughout your job." },
+  { h: "Respect the site", b: "We leave the site cleaner than we found it — your home, your neighbours, your builders." },
+  { h: "Stand behind the work", b: "If something isn't right, we come back and fix it. That is the promise." },
 ];
 
 function AboutPage() {
@@ -38,14 +38,14 @@ function AboutPage() {
     <>
       <section className="pt-40 pb-20 md:pt-52 md:pb-32">
         <div className="container-page">
-          <div className="eyebrow text-accent">About the studio</div>
+          <div className="eyebrow text-accent">About the company</div>
           <h1 className="mt-6 font-display font-light text-[clamp(2.5rem,6vw,5.5rem)] leading-[0.98] tracking-tightest text-ink max-w-4xl">
-            A family rendering studio, working at the level of the architects we serve.
+            Professional rendering contractors, bringing architectural concepts to life.
           </h1>
           <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Everest was founded in 2007 by Deepak Adhikari, after fifteen years on the trowels of Melbourne's
-            most demanding architectural builders. What began as a two-person operation is now a thirty-strong
-            studio with foremen in Melbourne and Sydney — still owner-operated, still on the tools.
+            At Everest Rendering Services, we specialise in acrylic-based renders, cement rendering,
+            texture finishes and blue board texture finishes. Every project — from a single feature wall
+            to a full facade — is executed with the highest level of craftsmanship and attention to detail.
           </p>
         </div>
       </section>
@@ -61,19 +61,19 @@ function AboutPage() {
           <div className="md:col-span-4">
             <div className="eyebrow text-accent">Mission</div>
             <p className="mt-6 font-display text-2xl tracking-tighter text-ink leading-snug">
-              To bring gallery-grade craftsmanship to every facade we touch — residential or commercial, big or small.
+              To deliver durable, aesthetically striking rendered finishes tailored to every client's brief.
             </p>
           </div>
           <div className="md:col-span-4">
-            <div className="eyebrow text-accent">Vision</div>
+            <div className="eyebrow text-accent">Approach</div>
             <p className="mt-6 font-display text-2xl tracking-tighter text-ink leading-snug">
-              To be the studio Australian architects specify by name — the trusted last mile of every considered build.
+              A skilled, trained team applying premium-grade materials with the care every home deserves.
             </p>
           </div>
           <div className="md:col-span-4">
-            <div className="eyebrow text-accent">Experience</div>
+            <div className="eyebrow text-accent">Coverage</div>
             <p className="mt-6 font-display text-2xl tracking-tighter text-ink leading-snug">
-              1,200+ completed facades. 120+ suburbs. Eighteen years of continuous operation without a single unpaid warranty claim.
+              Based in Southport on the Gold Coast, serving projects across South East Queensland.
             </p>
           </div>
         </div>
@@ -100,15 +100,15 @@ function AboutPage() {
             <img src={craftTrowel} alt="Craftsman applying render by hand" className="w-full aspect-[4/5] object-cover" loading="lazy" />
           </div>
           <div className="md:col-span-6">
-            <EyebrowHeading eyebrow="Why clients trust us" title={<>Eighteen years, zero shortcuts.</>} />
+            <EyebrowHeading eyebrow="Why choose us" title={<>The reasons people choose Everest.</>} />
             <ul className="mt-10 space-y-4 text-muted-foreground">
               {[
-                "Licensed in VIC and NSW, fully insured",
-                "White-carded, trained crew — no day labour",
-                "Manufacturer-certified applicators (Rockcote, Dulux Acratex, Unitex)",
-                "Documented QA on every project",
-                "Ten-year workmanship guarantee, in writing",
-                "Direct-line access to your foreman",
+                "QBCC-licensed rendering contractors",
+                "Premium-grade materials selected for Australian conditions",
+                "Skilled, continuously trained applicators",
+                "Flexible booking to suit your build programme",
+                "Prompt, proactive customer service",
+                "Direct communication from first call to handover",
               ].map((x) => (
                 <li key={x} className="flex gap-4">
                   <span className="text-accent mt-1">—</span>
@@ -122,13 +122,13 @@ function AboutPage() {
 
       <section className="py-24 bg-ink text-background">
         <div className="container-page">
-          <EyebrowHeading eyebrow="Meet the team" title={<>People, not personas.</>} className="text-background [&_*]:!text-background [&_.text-accent]:!text-accent" />
+          <EyebrowHeading eyebrow="What sets us apart" title={<>Built on four simple commitments.</>} className="text-background [&_*]:!text-background [&_.text-accent]:!text-accent" />
           <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((m) => (
-              <div key={m.name} className="border-t border-white/15 pt-6">
-                <div className="eyebrow text-accent">{m.years}</div>
-                <h3 className="mt-4 font-display text-xl tracking-tighter">{m.name}</h3>
-                <p className="mt-1 text-sm text-background/55">{m.role}</p>
+            {highlights.map((m, i) => (
+              <div key={m.h} className="border-t border-white/15 pt-6">
+                <div className="eyebrow text-accent">{String(i + 1).padStart(2, "0")}</div>
+                <h3 className="mt-4 font-display text-xl tracking-tighter">{m.h}</h3>
+                <p className="mt-2 text-sm text-background/60 leading-relaxed">{m.b}</p>
               </div>
             ))}
           </div>
