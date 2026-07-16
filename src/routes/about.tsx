@@ -100,15 +100,15 @@ function AboutPage() {
             <img src={craftTrowel} alt="Craftsman applying render by hand" className="w-full aspect-[4/5] object-cover" loading="lazy" />
           </div>
           <div className="md:col-span-6">
-            <EyebrowHeading eyebrow="Why clients trust us" title={<>Eighteen years, zero shortcuts.</>} />
+            <EyebrowHeading eyebrow="Why choose us" title={<>The reasons people choose Everest.</>} />
             <ul className="mt-10 space-y-4 text-muted-foreground">
               {[
-                "Licensed in VIC and NSW, fully insured",
-                "White-carded, trained crew — no day labour",
-                "Manufacturer-certified applicators (Rockcote, Dulux Acratex, Unitex)",
-                "Documented QA on every project",
-                "Ten-year workmanship guarantee, in writing",
-                "Direct-line access to your foreman",
+                "QBCC-licensed rendering contractors",
+                "Premium-grade materials selected for Australian conditions",
+                "Skilled, continuously trained applicators",
+                "Flexible booking to suit your build programme",
+                "Prompt, proactive customer service",
+                "Direct communication from first call to handover",
               ].map((x) => (
                 <li key={x} className="flex gap-4">
                   <span className="text-accent mt-1">—</span>
@@ -122,13 +122,13 @@ function AboutPage() {
 
       <section className="py-24 bg-ink text-background">
         <div className="container-page">
-          <EyebrowHeading eyebrow="Meet the team" title={<>People, not personas.</>} className="text-background [&_*]:!text-background [&_.text-accent]:!text-accent" />
+          <EyebrowHeading eyebrow="What sets us apart" title={<>Built on four simple commitments.</>} className="text-background [&_*]:!text-background [&_.text-accent]:!text-accent" />
           <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((m) => (
-              <div key={m.name} className="border-t border-white/15 pt-6">
-                <div className="eyebrow text-accent">{m.years}</div>
-                <h3 className="mt-4 font-display text-xl tracking-tighter">{m.name}</h3>
-                <p className="mt-1 text-sm text-background/55">{m.role}</p>
+            {highlights.map((m, i) => (
+              <div key={m.h} className="border-t border-white/15 pt-6">
+                <div className="eyebrow text-accent">{String(i + 1).padStart(2, "0")}</div>
+                <h3 className="mt-4 font-display text-xl tracking-tighter">{m.h}</h3>
+                <p className="mt-2 text-sm text-background/60 leading-relaxed">{m.b}</p>
               </div>
             ))}
           </div>
