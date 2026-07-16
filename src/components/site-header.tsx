@@ -58,10 +58,10 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <a
-            href="tel:1300000000"
+            href="tel:+61452109330"
             className={`hidden md:inline text-[12px] tracking-wider ${transparent ? "text-white/80" : "text-muted-foreground"}`}
           >
-            1300 000 000
+            +61 452 109 330
           </a>
           <Link
             to="/contact"
