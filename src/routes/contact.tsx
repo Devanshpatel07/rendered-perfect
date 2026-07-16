@@ -66,32 +66,33 @@ function ContactPage() {
         <div className="container-page grid md:grid-cols-12 gap-16">
           <div className="md:col-span-5 space-y-10">
             <div>
-              <div className="eyebrow text-accent">Melbourne studio</div>
+              <div className="eyebrow text-accent">Head office</div>
               <address className="mt-4 not-italic text-lg text-ink font-display tracking-tighter leading-snug">
-                14 Cremorne Street<br />
-                Cremorne VIC 3121
+                Southport<br />
+                QLD 4215, Australia
               </address>
             </div>
-            <div>
-              <div className="eyebrow text-accent">Sydney studio</div>
-              <address className="mt-4 not-italic text-lg text-ink font-display tracking-tighter leading-snug">
-                6 Regent Street<br />
-                Chippendale NSW 2008
-              </address>
-            </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <div>
                 <div className="eyebrow text-accent">Phone</div>
-                <a href="tel:1300000000" className="mt-3 block font-display text-xl tracking-tighter text-ink link-underline">1300 000 000</a>
+                <a href="tel:+61452109330" className="mt-3 block font-display text-xl tracking-tighter text-ink link-underline">+61 452 109 330</a>
               </div>
               <div>
                 <div className="eyebrow text-accent">Email</div>
-                <a href="mailto:hello@everestrendering.com.au" className="mt-3 block font-display text-lg tracking-tighter text-ink link-underline break-all">hello@everestrendering.com.au</a>
+                <a href="mailto:contact@everestrenderingservices.com.au" className="mt-3 block font-display text-lg tracking-tighter text-ink link-underline break-all">contact@everestrenderingservices.com.au</a>
               </div>
             </div>
             <div>
               <div className="eyebrow text-accent">Hours</div>
-              <p className="mt-3 text-muted-foreground">Monday – Friday · 7am – 5pm<br />Site visits by appointment</p>
+              <p className="mt-3 text-muted-foreground">Monday – Saturday · 7am – 5pm<br />Site visits by appointment</p>
+            </div>
+            <div>
+              <div className="eyebrow text-accent">Follow</div>
+              <div className="mt-3 flex gap-5 text-ink">
+                <a href="https://www.facebook.com/Everestrendering" target="_blank" rel="noreferrer" className="link-underline">Facebook</a>
+                <a href="https://www.instagram.com/everest_renderingservices" target="_blank" rel="noreferrer" className="link-underline">Instagram</a>
+                <a href="https://www.linkedin.com/company/everest-rendering-services-pyt-ltd/" target="_blank" rel="noreferrer" className="link-underline">LinkedIn</a>
+              </div>
             </div>
           </div>
 
@@ -100,7 +101,7 @@ function ContactPage() {
               <div className="border border-line p-10 bg-surface">
                 <div className="eyebrow text-accent">Message received</div>
                 <h2 className="mt-4 font-display text-3xl tracking-tighter text-ink">Thank you — we'll be in touch within one business day.</h2>
-                <p className="mt-4 text-muted-foreground">A member of the Everest studio will respond by email or phone. For urgent enquiries call <a href="tel:1300000000" className="text-ink link-underline">1300 000 000</a>.</p>
+                <p className="mt-4 text-muted-foreground">A member of the Everest team will respond by email or phone. For urgent enquiries call <a href="tel:+61452109330" className="text-ink link-underline">+61 452 109 330</a>.</p>
               </div>
             ) : (
               <form onSubmit={onSubmit} className="grid grid-cols-2 gap-6" noValidate>
@@ -114,12 +115,8 @@ function ContactPage() {
                     <option value="">Select…</option>
                     <option>Acrylic Rendering</option>
                     <option>Cement Rendering</option>
-                    <option>Texture Coating</option>
+                    <option>Texture Finishes</option>
                     <option>Blue Board Rendering</option>
-                    <option>Foam Panel Rendering</option>
-                    <option>Commercial</option>
-                    <option>Residential</option>
-                    <option>Render Repairs</option>
                     <option>Not sure — please advise</option>
                   </select>
                 </div>
@@ -146,8 +143,8 @@ function ContactPage() {
       <section>
         <div className="w-full h-[440px] bg-surface-2 relative overflow-hidden">
           <iframe
-            title="Everest Rendering Melbourne studio map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=144.994%2C-37.831%2C145.006%2C-37.822&layer=mapnik"
+            title="Everest Rendering Services — Southport, QLD"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=153.400%2C-27.975%2C153.430%2C-27.960&layer=mapnik&marker=-27.9679%2C153.4145"
             className="absolute inset-0 h-full w-full grayscale"
             loading="lazy"
           />
