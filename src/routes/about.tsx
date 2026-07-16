@@ -19,18 +19,18 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const team = [
-  { name: "Deepak Adhikari", role: "Founder & Master Renderer", years: "22 yrs" },
-  { name: "Sarah Whitmore", role: "Studio Director", years: "12 yrs" },
-  { name: "Marco Bianchi", role: "Site Foreman, Melbourne", years: "15 yrs" },
-  { name: "Jason Truong", role: "Site Foreman, Sydney", years: "11 yrs" },
+const highlights = [
+  { h: "QBCC licensed", b: "Fully licensed and insured to operate as rendering contractors in Queensland." },
+  { h: "Premium materials", b: "Only premium-grade acrylic, cement and texture systems selected for Australian conditions." },
+  { h: "Trained applicators", b: "Ongoing training keeps our team across current techniques and manufacturer standards." },
+  { h: "Flexible scheduling", b: "We work around your build programme — with prompt communication from first call to handover." },
 ];
 
 const values = [
-  { h: "Craft over speed", b: "We say no to projects that can't be done properly. Every time." },
-  { h: "Own the outcome", b: "Ten-year workmanship guarantee. No fine print, no wriggle room." },
-  { h: "Show the work", b: "Our schedule of mixes and products is documented and handed over on completion." },
-  { h: "Respect the site", b: "Cleaner at handover than at start. Neighbours matter." },
+  { h: "Craft over speed", b: "We take the time each finish needs to be done properly. Every surface, every corner." },
+  { h: "Clear communication", b: "Prompt replies, honest timelines, and one direct point of contact throughout your job." },
+  { h: "Respect the site", b: "We leave the site cleaner than we found it — your home, your neighbours, your builders." },
+  { h: "Stand behind the work", b: "If something isn't right, we come back and fix it. That is the promise." },
 ];
 
 function AboutPage() {
