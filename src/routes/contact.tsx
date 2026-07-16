@@ -6,7 +6,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Everest Rendering" },
-      { name: "description", content: "Request a free quote or speak with the Everest Rendering studio. Melbourne and Sydney offices." },
+      { name: "description", content: "Request a free quote from Everest Rendering Services. QBCC-licensed rendering contractors based in Southport, Queensland." },
       { property: "og:title", content: "Contact — Everest Rendering" },
       { property: "og:description", content: "Book a site visit or request a quote." },
       { property: "og:url", content: "/contact" },
