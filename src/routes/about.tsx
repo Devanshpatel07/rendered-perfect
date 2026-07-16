@@ -8,9 +8,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Everest Rendering Services" },
-      { name: "description", content: "Family-run Australian rendering studio. Eighteen years, 1,200+ facades, in-house crews only." },
-      { property: "og:title", content: "About — Everest Rendering" },
-      { property: "og:description", content: "Family-run Australian rendering studio, eighteen years of craft." },
+      { name: "description", content: "QBCC-licensed rendering contractors based on the Gold Coast. Specialists in acrylic, cement, texture and blue board finishes across South East Queensland." },
+      { property: "og:title", content: "About — Everest Rendering Services" },
+      { property: "og:description", content: "QBCC-licensed rendering contractors based on the Gold Coast, Queensland." },
       { property: "og:url", content: "/about" },
       { property: "og:image", content: teamOnsite },
     ],
