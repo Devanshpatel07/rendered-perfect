@@ -285,55 +285,55 @@ export const projects: Project[] = [
 export const testimonials = [
   {
     quote:
-      "Everest rendered our entire Vaucluse facade. The finish is gallery-grade — clients ask us who did it every time.",
-    author: "Kate Ferris",
-    role: "Ferris Architecture",
+      "The finish is beautiful — clean lines, even texture, and they took real care with the details around the windows.",
+    author: "Homeowner",
+    role: "Southport, QLD",
   },
   {
     quote:
-      "We've used a lot of renderers. None have combined this level of craftsmanship with real programme discipline.",
-    author: "Ben Halstead",
-    role: "Halstead Constructions",
+      "Great communication from the first quote through to handover. Turned up when they said they would and left the site tidy every day.",
+    author: "Builder",
+    role: "Gold Coast",
   },
   {
-    quote: "Quiet, precise, on time. They left the site cleaner than they found it.",
-    author: "Priya Naidu",
-    role: "Homeowner, Mosman",
+    quote: "Professional, well priced and quality workmanship. Would recommend to anyone.",
+    author: "Homeowner",
+    role: "Brisbane, QLD",
   },
 ];
 
 export const faqs = [
   {
-    q: "How long does a full facade take?",
-    a: "A typical two-storey residential facade takes four to six weeks depending on weather, access and finish. We give a firm programme with every quote.",
-  },
-  {
-    q: "Do you supply and install foam?",
-    a: "Yes — we cut, glue and mesh EPS panels on site, then apply the render system as one integrated package.",
-  },
-  {
-    q: "Can you match an existing texture?",
-    a: "In almost every case, yes. We keep a physical sample library and mix on site to match colour and grain.",
+    q: "What areas do you service?",
+    a: "We are based in Southport on the Gold Coast and take on projects across South East Queensland — from Brisbane down to the Tweed.",
   },
   {
     q: "Are you licensed and insured?",
-    a: "Fully. We hold public liability insurance, WorkCover, and all crew are white-carded and trained internally.",
+    a: "Yes. Everest Rendering Services is a QBCC-licensed company and fully insured.",
   },
   {
-    q: "Do you work interstate?",
-    a: "Our base is Melbourne and Sydney. We take on selected projects across VIC, NSW and the ACT.",
+    q: "What kinds of render do you offer?",
+    a: "Acrylic-based renders, traditional cement rendering, texture finishes and blue board texture finishes — for both new builds and renovations.",
   },
   {
-    q: "What warranty do you offer?",
-    a: "Ten years on workmanship, plus the manufacturer warranty on materials — typically fifteen years.",
+    q: "Can you match an existing render?",
+    a: "In most cases, yes. We mix on site to match colour and grain as closely as possible before starting the main work.",
+  },
+  {
+    q: "How do I get a quote?",
+    a: "Call +61 452 109 330, email contact@everestrenderingservices.com.au, or use the enquiry form and we'll respond within one business day.",
+  },
+  {
+    q: "How long does a typical job take?",
+    a: "It depends on the size and finish, but we'll give you a firm timeline with every quote and stick to it.",
   },
 ];
 
 export const stats = [
-  { label: "Years of craft", value: "18+" },
-  { label: "Projects completed", value: "1,200+" },
-  { label: "Suburbs served", value: "120+" },
-  { label: "Workmanship guarantee", value: "10 yr" },
+  { label: "QBCC licensed", value: "✓" },
+  { label: "Based on the", value: "Gold Coast" },
+  { label: "Free quotes", value: "24 hr" },
+  { label: "Serving", value: "SE QLD" },
 ];
 
 export const process = [
