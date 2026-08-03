@@ -346,8 +346,9 @@ function Home() {
             <Link to="/contact" className="bg-accent text-accent-foreground px-8 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-background hover:text-ink transition-colors">
               Request a free quote
             </Link>
-            <a href="tel:1300000000" className="border border-white/40 px-8 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-white/10 transition-colors">
-              Call 1300 000 000
+            <a href="tel:+61452109330" className="border border-white/40 px-8 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-white/10 transition-colors">
+              Call +61 452 109 330
+
             </a>
           </div>
         </div>
