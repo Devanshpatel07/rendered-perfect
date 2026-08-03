@@ -266,7 +266,7 @@ export const projects: Project[] = [
   {
     slug: "trowel-detail-study",
     title: "Trowel Detail Study",
-    suburb: "Melbourne studio",
+    suburb: "Gold Coast studio",
     year: 2024,
     category: "Texture Finish",
     service: "Texture Coating",

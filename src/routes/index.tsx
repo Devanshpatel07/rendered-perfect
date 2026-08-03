@@ -16,15 +16,18 @@ import { EyebrowHeading } from "@/components/eyebrow-heading";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Everest Rendering — Premium Rendering, Australia" },
+      { title: "Everest Rendering Services — Rendering Contractors, Gold Coast" },
       {
         name: "description",
         content:
-          "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia.",
+          "QBCC-licensed rendering contractors in Southport, Gold Coast. Acrylic renders, cement rendering, texture finishes and blue board across South East Queensland.",
       },
-      { property: "og:title", content: "Everest Rendering — Premium Rendering, Australia" },
-      { property: "og:description", content: "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia." },
+      { property: "og:title", content: "Everest Rendering Services — Rendering Contractors, Gold Coast" },
+      { property: "og:description", content: "QBCC-licensed rendering contractors delivering acrylic, cement, texture and blue board finishes across South East Queensland." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
+
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -48,17 +51,23 @@ function Home() {
 
         <div className="container-page pb-16 pt-40 md:pb-24">
           <div className="max-w-4xl reveal">
-            <div className="eyebrow text-white/70">Everest Rendering Services · Est. 2007</div>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 border border-white/25 bg-white/10 backdrop-blur-sm px-3 py-1.5 eyebrow text-white/85">
+                <span className="size-1.5 rounded-full bg-accent" /> QBCC Licensed Company
+              </span>
+              <span className="eyebrow text-white/60">Southport · Gold Coast · QLD</span>
+            </div>
             <h1 className="mt-6 font-display font-light text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] tracking-tightest">
-              The quiet craft
+              Professional and expert
               <br />
-              of the rendered <em className="italic font-normal">facade</em>.
+              rendering <em className="italic font-normal">contractors</em>.
             </h1>
             <div className="mt-10 flex flex-col md:flex-row gap-6 md:gap-12 md:items-end max-w-3xl">
               <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-md">
-                Premium rendering for Australia's most considered residential and commercial projects.
-                Trowel-finished, guaranteed, done properly.
+                Bringing architectural concepts to life with acrylic renders, cement rendering, texture
+                finishes and blue board — across South East Queensland.
               </p>
+
               <div className="flex flex-wrap gap-3">
                 <Link
                   to="/contact"
@@ -207,29 +216,34 @@ function Home() {
           <div className="md:col-span-6 relative">
             <img src={craftTrowel} alt="Rendering by hand with a steel trowel" className="w-full aspect-[4/5] object-cover" loading="lazy" />
             <div className="hidden md:block absolute -bottom-8 -right-8 bg-accent text-accent-foreground p-8 max-w-[220px]">
-              <div className="font-display text-4xl tracking-tightest">10 yr</div>
-              <div className="eyebrow text-accent-foreground/80 mt-2">Workmanship guarantee</div>
+              <div className="font-display text-3xl tracking-tightest">QBCC</div>
+              <div className="eyebrow text-accent-foreground/80 mt-2">Licensed & insured company</div>
             </div>
           </div>
           <div className="md:col-span-6">
-            <EyebrowHeading eyebrow="Why Everest" title={<>The details that survive the seasons.</>} />
-            <div className="mt-10 space-y-8">
+            <EyebrowHeading eyebrow="Why choose us" title={<>Reasons people keep choosing Everest.</>} />
+            <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-8">
               {[
                 {
-                  h: "In-house crews, no sub-contracting",
-                  b: "Every trowel on your project is on our books. That's how consistency survives from level one to level two.",
+                  h: "Quality material",
+                  b: "Only premium-grade materials, selected for superior quality and endurance — striking finishes that last.",
                 },
                 {
-                  h: "Preparation is the finish",
-                  b: "Meshed junctions, primed substrates, protected edges. The work you never see is what makes the finish last.",
+                  h: "Trained workers",
+                  b: "Highly skilled professionals with continuous training in current rendering techniques and standards.",
                 },
                 {
-                  h: "Written specifications",
-                  b: "You receive an itemised mix and product schedule for your home — mattering most if you ever sell.",
+                  h: "Time availability",
+                  b: "Flexible, convenient booking times so our work aligns with your schedule and build programme.",
                 },
-              ].map((f) => (
+                {
+                  h: "Quick response",
+                  b: "Prompt, proactive customer service with swift answers and efficient solutions to any query.",
+                },
+              ].map((f, i) => (
                 <div key={f.h} className="border-t border-line pt-6">
-                  <h3 className="font-display text-xl tracking-tighter text-ink">{f.h}</h3>
+                  <div className="font-mono text-[11px] text-accent">{String(i + 1).padStart(2, "0")}</div>
+                  <h3 className="mt-3 font-display text-xl tracking-tighter text-ink">{f.h}</h3>
                   <p className="mt-2 text-muted-foreground leading-relaxed">{f.b}</p>
                 </div>
               ))}
@@ -237,6 +251,7 @@ function Home() {
           </div>
         </div>
       </section>
+
 
       {/* PROCESS RIBBON */}
       <section className="bg-surface py-24 md:py-28">
@@ -331,8 +346,9 @@ function Home() {
             <Link to="/contact" className="bg-accent text-accent-foreground px-8 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-background hover:text-ink transition-colors">
               Request a free quote
             </Link>
-            <a href="tel:1300000000" className="border border-white/40 px-8 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-white/10 transition-colors">
-              Call 1300 000 000
+            <a href="tel:+61452109330" className="border border-white/40 px-8 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-white/10 transition-colors">
+              Call +61 452 109 330
+
             </a>
           </div>
         </div>
