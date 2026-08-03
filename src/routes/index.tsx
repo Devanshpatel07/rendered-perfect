@@ -216,29 +216,34 @@ function Home() {
           <div className="md:col-span-6 relative">
             <img src={craftTrowel} alt="Rendering by hand with a steel trowel" className="w-full aspect-[4/5] object-cover" loading="lazy" />
             <div className="hidden md:block absolute -bottom-8 -right-8 bg-accent text-accent-foreground p-8 max-w-[220px]">
-              <div className="font-display text-4xl tracking-tightest">10 yr</div>
-              <div className="eyebrow text-accent-foreground/80 mt-2">Workmanship guarantee</div>
+              <div className="font-display text-3xl tracking-tightest">QBCC</div>
+              <div className="eyebrow text-accent-foreground/80 mt-2">Licensed & insured company</div>
             </div>
           </div>
           <div className="md:col-span-6">
-            <EyebrowHeading eyebrow="Why Everest" title={<>The details that survive the seasons.</>} />
-            <div className="mt-10 space-y-8">
+            <EyebrowHeading eyebrow="Why choose us" title={<>Reasons people keep choosing Everest.</>} />
+            <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-8">
               {[
                 {
-                  h: "In-house crews, no sub-contracting",
-                  b: "Every trowel on your project is on our books. That's how consistency survives from level one to level two.",
+                  h: "Quality material",
+                  b: "Only premium-grade materials, selected for superior quality and endurance — striking finishes that last.",
                 },
                 {
-                  h: "Preparation is the finish",
-                  b: "Meshed junctions, primed substrates, protected edges. The work you never see is what makes the finish last.",
+                  h: "Trained workers",
+                  b: "Highly skilled professionals with continuous training in current rendering techniques and standards.",
                 },
                 {
-                  h: "Written specifications",
-                  b: "You receive an itemised mix and product schedule for your home — mattering most if you ever sell.",
+                  h: "Time availability",
+                  b: "Flexible, convenient booking times so our work aligns with your schedule and build programme.",
                 },
-              ].map((f) => (
+                {
+                  h: "Quick response",
+                  b: "Prompt, proactive customer service with swift answers and efficient solutions to any query.",
+                },
+              ].map((f, i) => (
                 <div key={f.h} className="border-t border-line pt-6">
-                  <h3 className="font-display text-xl tracking-tighter text-ink">{f.h}</h3>
+                  <div className="font-mono text-[11px] text-accent">{String(i + 1).padStart(2, "0")}</div>
+                  <h3 className="mt-3 font-display text-xl tracking-tighter text-ink">{f.h}</h3>
                   <p className="mt-2 text-muted-foreground leading-relaxed">{f.b}</p>
                 </div>
               ))}
@@ -246,6 +251,7 @@ function Home() {
           </div>
         </div>
       </section>
+
 
       {/* PROCESS RIBBON */}
       <section className="bg-surface py-24 md:py-28">
