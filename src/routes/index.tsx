@@ -51,17 +51,23 @@ function Home() {
 
         <div className="container-page pb-16 pt-40 md:pb-24">
           <div className="max-w-4xl reveal">
-            <div className="eyebrow text-white/70">Everest Rendering Services · Est. 2007</div>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 border border-white/25 bg-white/10 backdrop-blur-sm px-3 py-1.5 eyebrow text-white/85">
+                <span className="size-1.5 rounded-full bg-accent" /> QBCC Licensed Company
+              </span>
+              <span className="eyebrow text-white/60">Southport · Gold Coast · QLD</span>
+            </div>
             <h1 className="mt-6 font-display font-light text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] tracking-tightest">
-              The quiet craft
+              Professional and expert
               <br />
-              of the rendered <em className="italic font-normal">facade</em>.
+              rendering <em className="italic font-normal">contractors</em>.
             </h1>
             <div className="mt-10 flex flex-col md:flex-row gap-6 md:gap-12 md:items-end max-w-3xl">
               <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-md">
-                Premium rendering for Australia's most considered residential and commercial projects.
-                Trowel-finished, guaranteed, done properly.
+                Bringing architectural concepts to life with acrylic renders, cement rendering, texture
+                finishes and blue board — across South East Queensland.
               </p>
+
               <div className="flex flex-wrap gap-3">
                 <Link
                   to="/contact"
