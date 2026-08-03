@@ -1,5 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logo from "@/assets/everest-logo.png.asset.json";
+
 
 const nav = [
   { to: "/projects", label: "Projects" },
