@@ -36,10 +36,14 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between gap-8">
-        <Link to="/" className="flex items-baseline gap-2 font-display" aria-label="Everest Rendering — Home">
-          <span className="text-2xl font-medium tracking-tightest">Everest</span>
-          <span className={`eyebrow ${transparent ? "text-white/70" : ""}`}>Rendering</span>
+        <Link to="/" className="flex items-center gap-3" aria-label="Everest Rendering Services — Home">
+          <img src={logo.url} alt="Everest Rendering Services logo" className="h-11 w-auto" width={140} height={110} />
+          <span className="hidden sm:flex items-baseline gap-2 font-display">
+            <span className="text-2xl font-medium tracking-tightest">Everest</span>
+            <span className={`eyebrow ${transparent ? "text-white/70" : ""}`}>Rendering</span>
+          </span>
         </Link>
+
 
         <nav className="hidden lg:flex items-center gap-9">
           {nav.map((item) => (
