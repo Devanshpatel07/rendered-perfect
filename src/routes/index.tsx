@@ -16,15 +16,18 @@ import { EyebrowHeading } from "@/components/eyebrow-heading";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Everest Rendering — Premium Rendering, Australia" },
+      { title: "Everest Rendering Services — Rendering Contractors, Gold Coast" },
       {
         name: "description",
         content:
-          "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia.",
+          "QBCC-licensed rendering contractors in Southport, Gold Coast. Acrylic renders, cement rendering, texture finishes and blue board across South East Queensland.",
       },
-      { property: "og:title", content: "Everest Rendering — Premium Rendering, Australia" },
-      { property: "og:description", content: "Award-quality acrylic, cement, texture and foam-panel rendering for luxury homes, architects and builders across Melbourne, Sydney and Australia." },
+      { property: "og:title", content: "Everest Rendering Services — Rendering Contractors, Gold Coast" },
+      { property: "og:description", content: "QBCC-licensed rendering contractors delivering acrylic, cement, texture and blue board finishes across South East Queensland." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
+
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
