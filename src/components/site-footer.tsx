@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/everest-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
@@ -6,10 +7,14 @@ export function SiteFooter() {
       <div className="container-page py-20">
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Link to="/" className="flex items-baseline gap-2 font-display text-background">
-              <span className="text-3xl tracking-tightest">Everest</span>
-              <span className="eyebrow text-background/60">Rendering</span>
+            <Link to="/" className="flex items-center gap-3 font-display text-background">
+              <img src={logo.url} alt="Everest Rendering Services logo" className="h-14 w-auto" width={140} height={110} loading="lazy" />
+              <span className="flex items-baseline gap-2">
+                <span className="text-3xl tracking-tightest">Everest</span>
+                <span className="eyebrow text-background/60">Rendering</span>
+              </span>
             </Link>
+
             <p className="mt-8 max-w-md text-background/60 leading-relaxed">
               QBCC-licensed rendering contractors based on the Gold Coast, delivering acrylic, cement,
               texture and blue board finishes for homes and businesses across South East Queensland.
