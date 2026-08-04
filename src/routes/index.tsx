@@ -38,22 +38,22 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[100svh] flex flex-col justify-end text-white">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative min-h-[100svh] flex flex-col justify-end text-white overflow-hidden">
+        <div className="absolute inset-0 -z-10 overflow-hidden">
           <video
             autoPlay
             muted
             loop
             playsInline
             poster={heroFacade}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover scale-105"
           >
             <source src="/hero-video.mp4" type="video/mp4" />
             {/* Fallback image if video is not supported */}
             <img
               src={heroFacade}
               alt="Contemporary Australian home facade in warm-white acrylic render at golden hour"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover scale-105"
             />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/20 to-ink/70" />
