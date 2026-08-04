@@ -46,17 +46,18 @@ function Home() {
             loop
             playsInline
             poster={heroFacade}
-            className="h-full w-full object-cover scale-125"
+            className="h-full w-full object-cover scale-140 origin-center"
           >
             <source src="/hero-video.mp4" type="video/mp4" />
             {/* Fallback image if video is not supported */}
             <img
               src={heroFacade}
               alt="Contemporary Australian home facade in warm-white acrylic render at golden hour"
-              className="h-full w-full object-cover scale-125"
+              className="h-full w-full object-cover scale-140 origin-center"
             />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/20 to-ink/70" />
+          {/* Edge vignetting and gradient overlay to hide top/corner branding */}
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/90 via-ink/30 to-ink/80" />
         </div>
 
         <div className="container-page pb-16 pt-32 sm:pt-40 md:pb-24">
