@@ -31,10 +31,25 @@ type Errors = Partial<Record<keyof FormValues, string>>;
 function ContactPage() {
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  function triggerMailto(data: FormValues) {
+    const subject = encodeURIComponent(`New Enquiry: ${data.service || "Rendering Services"} - ${data.name}`);
+    const body = encodeURIComponent(
+      `Name: ${data.name}\n` +
+      `Email: ${data.email}\n` +
+      `Phone: ${data.phone || "Not provided"}\n` +
+      `Suburb: ${data.suburb || "Not provided"}\n` +
+      `Service: ${data.service || "General Enquiry"}\n\n` +
+      `Project Details:\n${data.message}`
+    );
+    window.location.href = `mailto:contact@everestrenderingservices.com.au?subject=${subject}&body=${body}`;
+  }
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<string, string>;
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries()) as Record<string, string>;
     const parsed = schema.safeParse(data);
     if (!parsed.success) {
       const errs: Errors = {};
@@ -45,7 +60,59 @@ function ContactPage() {
       return;
     }
     setErrors({});
-    setSent(true);
+    setIsSubmitting(true);
+
+    const targetEmail = "contact@everestrenderingservices.com.au";
+    const web3Key = import.meta.env.VITE_WEB3FORMS_KEY || import.meta.env.VITE_CONTACT_KEY;
+
+    try {
+      if (web3Key) {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            access_key: web3Key,
+            subject: `New Project Enquiry from ${parsed.data.name}`,
+            from_name: parsed.data.name,
+            email: parsed.data.email,
+            phone: parsed.data.phone || "Not provided",
+            suburb: parsed.data.suburb || "Not provided",
+            service: parsed.data.service || "General Enquiry",
+            message: parsed.data.message,
+          }),
+        });
+        if (!res.ok) throw new Error("Web3Forms response not ok");
+      } else {
+        const res = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            _subject: `New Project Enquiry from ${parsed.data.name}`,
+            name: parsed.data.name,
+            email: parsed.data.email,
+            phone: parsed.data.phone || "Not provided",
+            suburb: parsed.data.suburb || "Not provided",
+            service: parsed.data.service || "General Enquiry",
+            message: parsed.data.message,
+            _template: "table"
+          }),
+        });
+        
+        if (!res.ok) {
+          triggerMailto(parsed.data);
+        }
+      }
+      setSent(true);
+    } catch (err) {
+      console.warn("Direct form API dispatch failed, opening mail client fallback:", err);
+      triggerMailto(parsed.data);
+      setSent(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -57,7 +124,7 @@ function ContactPage() {
             Tell us about your project.
           </h1>
           <p className="mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Written, itemised quotes within 48 hours. Site visits by appointment.
+            Written, itemised quotes within 48 hours. Enquiries sent directly to contact@everestrenderingservices.com.au.
           </p>
         </div>
       </section>
@@ -99,9 +166,18 @@ function ContactPage() {
           <div className="md:col-span-7">
             {sent ? (
               <div className="border border-line p-6 sm:p-10 bg-surface">
-                <div className="eyebrow text-accent">Message received</div>
-                <h2 className="mt-4 font-display text-2xl sm:text-3xl tracking-tighter text-ink">Thank you — we'll be in touch within one business day.</h2>
-                <p className="mt-4 text-sm sm:text-base text-muted-foreground">A member of the Everest team will respond by email or phone. For urgent enquiries call <a href="tel:+61452109330" className="text-ink link-underline">+61 452 109 330</a>.</p>
+                <div className="eyebrow text-accent">Message Sent</div>
+                <h2 className="mt-4 font-display text-2xl sm:text-3xl tracking-tighter text-ink">Thank you — your enquiry has been sent directly to our email.</h2>
+                <p className="mt-4 text-sm sm:text-base text-muted-foreground">A member of the Everest team will respond to your query at <strong>contact@everestrenderingservices.com.au</strong> within one business day. For urgent enquiries, call <a href="tel:+61452109330" className="text-ink link-underline">+61 452 109 330</a>.</p>
+                <div className="mt-6">
+                  <button
+                    type="button"
+                    onClick={() => setSent(false)}
+                    className="text-xs uppercase tracking-widest text-accent hover:underline font-semibold"
+                  >
+                    ← Send another enquiry
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={onSubmit} className="grid grid-cols-2 gap-5 sm:gap-6" noValidate>
@@ -129,9 +205,13 @@ function ContactPage() {
                   {errors.message && <p className="mt-2 text-sm text-destructive">{errors.message}</p>}
                 </div>
                 <div className="col-span-2 flex flex-col sm:flex-row justify-between gap-4 items-stretch sm:items-center pt-4">
-                  <p className="text-xs text-muted-foreground">By submitting, you agree to be contacted about your enquiry.</p>
-                  <button type="submit" className="w-full sm:w-auto bg-ink text-background px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-accent transition-colors text-center">
-                    Request quote
+                  <p className="text-xs text-muted-foreground">Submitting sends your query directly to contact@everestrenderingservices.com.au.</p>
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto bg-ink text-background px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-accent transition-colors text-center disabled:opacity-50"
+                  >
+                    {isSubmitting ? "Sending…" : "Request quote"}
                   </button>
                 </div>
               </form>
