@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 110" width="450" height="110" fill="none">
+  <!-- ICON GROUP (LEFT) -->
+  <g transform="translate(10, 0)">
+    <!-- Arch / Semi-circle stroke above mountains -->
+    <path d="M 15 55 A 48 48 0 0 1 105 55" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Mountain Peaks -->
+    <path d="M 32 52 L 46 32 L 56 42 L 68 24 L 78 38 L 88 52" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 46 32 L 50 42 M 68 24 L 72 38" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+
+    <!-- House Roof -->
+    <path d="M 18 56 L 60 26 L 102 56" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- Window (4 Panes) -->
+    <rect x="47" y="52" width="8" height="8" fill="#FFFFFF"/>
+    <rect x="57" y="52" width="8" height="8" fill="#FFFFFF"/>
+    <rect x="47" y="62" width="8" height="8" fill="#FFFFFF"/>
+    <rect x="57" y="62" width="8" height="8" fill="#FFFFFF"/>
+
+    <!-- Worker Silhouette (Rendering Wall) -->
+    <!-- Head -->
+    <circle cx="78" cy="48" r="3" fill="#FFFFFF"/>
+    <!-- Torso -->
+    <path d="M 78 51 L 76 66 L 79 78 M 76 66 L 73 78" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Raised Arm with Trowel -->
+    <path d="M 77 54 L 72 46 L 68 44" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <!-- Trowel/Board -->
+    <rect x="65" y="42" width="5" height="4" fill="#FFFFFF" transform="rotate(-15 65 42)"/>
+
+    <!-- Double Curved Swoosh Base Lines -->
+    <path d="M 8 74 Q 60 66 112 76" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 18 80 Q 60 72 102 82" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- TEXT GROUP (RIGHT) -->
+  <g transform="translate(135, 0)">
+    <!-- Main Headline: EVEREST RENDERING -->
+    <text x="0" y="46" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" letter-spacing="1.5">EVEREST RENDERING</text>
+
+    <!-- Subtitle: SERVICES PTY LTD -->
+    <text x="0" y="70" font-family="'Montserrat', 'Arial', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" letter-spacing="4" opacity="0.95">SERVICES PTY LTD</text>
+
+    <!-- Tagline: Simply the Best -->
+    <text x="0" y="90" font-family="'Playfair Display', 'Georgia', serif" font-style="italic" font-weight="500" font-size="13" fill="#FFFFFF" opacity="0.8">Simply the Best</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" fill="none">
+  <!-- Outer subtle architectural border -->
+  <rect x="8" y="8" width="144" height="144" rx="28" fill="#11161B" stroke="#D9A851" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <!-- Architectural Facet 1 (Left shade) -->
+  <polygon points="80,32 36,118 80,102" fill="#D9A851" opacity="0.85"/>
+  
+  <!-- Architectural Facet 2 (Right highlight) -->
+  <polygon points="80,32 80,102 124,118" fill="#F4D084" opacity="0.95"/>
+  
+  <!-- Inner peak line -->
+  <polyline points="36,118 80,32 124,118" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Precision horizontal rendering accent line -->
+  <line x1="28" y1="128" x2="132" y2="128" stroke="#D9A851" stroke-width="3" stroke-linecap="round"/>
+</svg>
