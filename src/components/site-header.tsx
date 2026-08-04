@@ -2,8 +2,6 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import logo from "@/assets/everest-logo.svg";
 
-
-
 const nav = [
   { to: "/", label: "Home" },
   { to: "/projects", label: "Projects" },
@@ -52,7 +50,7 @@ export function SiteHeader() {
             src={logo}
             alt="Everest Rendering Services logo"
             className="h-11 sm:h-13 w-auto object-contain"
-            width={450}
+            width={460}
             height={110}
           />
         </Link>
@@ -118,8 +116,11 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-background/98 backdrop-blur-xl border-t border-line overflow-y-auto flex flex-col justify-between">
-          <nav className="container-page py-6 flex flex-col gap-1">
+        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[#0d1b2e] text-white backdrop-blur-xl border-t border-white/10 overflow-y-auto flex flex-col justify-between">
+          <div className="container-page pt-8 pb-4 flex flex-col items-center border-b border-white/10">
+            <img src={logo} alt="Everest Rendering Services logo" className="h-28 w-auto object-contain" width={320} height={250} />
+          </div>
+          <nav className="container-page py-4 flex flex-col gap-1">
             {nav.map((item) => (
               <Link
                 key={item.to}

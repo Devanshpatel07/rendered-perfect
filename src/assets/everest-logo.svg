@@ -1,46 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 110" width="450" height="110" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="460" height="110" fill="none">
+  <!-- EVEREST RENDERING SERVICES PTY LTD — Official Vector Logo with Navy Blue Background (#0d1b2e) -->
+  
+  <!-- NAVY BLUE BACKGROUND -->
+  <rect width="460" height="110" rx="10" fill="#0d1b2e"/>
+  
   <!-- ICON GROUP (LEFT) -->
-  <g transform="translate(10, 0)">
-    <!-- Arch / Semi-circle stroke above mountains -->
-    <path d="M 15 55 A 48 48 0 0 1 105 55" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+  <g transform="translate(14, 2)">
+    <!-- 1. Semi-Circular Arch -->
+    <path d="M 16,58 A 48,48 0 0,1 112,58" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
 
-    <!-- Mountain Peaks -->
-    <path d="M 32 52 L 46 32 L 56 42 L 68 24 L 78 38 L 88 52" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M 46 32 L 50 42 M 68 24 L 72 38" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+    <!-- 2. Mountain Peaks ABOVE Roof Line -->
+    <path d="M 36,36 L 50,20 L 60,30 L 72,14 L 82,26 L 92,36" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 50,20 L 55,30 M 72,14 L 77,26" stroke="#FFFFFF" stroke-width="1.8" opacity="0.8" stroke-linecap="round"/>
 
-    <!-- House Roof -->
-    <path d="M 18 56 L 60 26 L 102 56" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- 3. House Roof Line (Thick Gable Roof) -->
+    <path d="M 12,58 L 64,26 L 116,58" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linejoin="miter" stroke-linecap="square"/>
 
-    <!-- Window (4 Panes) -->
-    <rect x="47" y="52" width="8" height="8" fill="#FFFFFF"/>
-    <rect x="57" y="52" width="8" height="8" fill="#FFFFFF"/>
-    <rect x="47" y="62" width="8" height="8" fill="#FFFFFF"/>
-    <rect x="57" y="62" width="8" height="8" fill="#FFFFFF"/>
+    <!-- 4. 4-Pane Window (Inside House Under Roof) -->
+    <rect x="48" y="48" width="7" height="7" fill="#FFFFFF"/>
+    <rect x="57" y="48" width="7" height="7" fill="#FFFFFF"/>
+    <rect x="48" y="57" width="7" height="7" fill="#FFFFFF"/>
+    <rect x="57" y="57" width="7" height="7" fill="#FFFFFF"/>
 
-    <!-- Worker Silhouette (Rendering Wall) -->
-    <!-- Head -->
-    <circle cx="78" cy="48" r="3" fill="#FFFFFF"/>
-    <!-- Torso -->
-    <path d="M 78 51 L 76 66 L 79 78 M 76 66 L 73 78" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-    <!-- Raised Arm with Trowel -->
-    <path d="M 77 54 L 72 46 L 68 44" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-    <!-- Trowel/Board -->
-    <rect x="65" y="42" width="5" height="4" fill="#FFFFFF" transform="rotate(-15 65 42)"/>
+    <!-- 5. Render Worker Silhouette (Inside House Under Roof) -->
+    <circle cx="85" cy="44" r="2.8" fill="#FFFFFF"/>
+    <path d="M 85,47 L 83,60 L 86,72 M 83,60 L 80,72" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M 84,49 L 80,42 L 76,39" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <polygon points="73,37 78,36 77,41 72,42" fill="#FFFFFF"/>
 
-    <!-- Double Curved Swoosh Base Lines -->
-    <path d="M 8 74 Q 60 66 112 76" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 18 80 Q 60 72 102 82" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8"/>
+    <!-- 6. Curved Swoosh Horizon Base -->
+    <path d="M 8,74 Q 64,66 120,76" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round" fill="none"/>
+    <path d="M 18,80 Q 64,73 110,82" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85"/>
   </g>
 
-  <!-- TEXT GROUP (RIGHT) -->
-  <g transform="translate(135, 0)">
-    <!-- Main Headline: EVEREST RENDERING -->
-    <text x="0" y="46" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" letter-spacing="1.5">EVEREST RENDERING</text>
+  <!-- TYPOGRAPHY GROUP (RIGHT) -->
+  <g transform="translate(146, 5)">
+    <!-- Primary Title: EVEREST RENDERING -->
+    <text x="0" y="44" font-family="'Montserrat', 'Inter', system-ui, -apple-system, sans-serif" font-weight="900" font-size="23" fill="#FFFFFF" letter-spacing="1.2">EVEREST RENDERING</text>
 
-    <!-- Subtitle: SERVICES PTY LTD -->
-    <text x="0" y="70" font-family="'Montserrat', 'Arial', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" letter-spacing="4" opacity="0.95">SERVICES PTY LTD</text>
+    <!-- Secondary Title: SERVICES PTY LTD -->
+    <text x="0" y="67" font-family="'Montserrat', 'Inter', system-ui, -apple-system, sans-serif" font-weight="700" font-size="13.5" fill="#FFFFFF" letter-spacing="3.8" opacity="0.95">SERVICES PTY LTD</text>
 
     <!-- Tagline: Simply the Best -->
-    <text x="0" y="90" font-family="'Playfair Display', 'Georgia', serif" font-style="italic" font-weight="500" font-size="13" fill="#FFFFFF" opacity="0.8">Simply the Best</text>
+    <text x="0" y="87" font-family="'Playfair Display', 'Georgia', 'Times New Roman', serif" font-style="italic" font-weight="500" font-size="13" fill="#FFFFFF" letter-spacing="0.5" opacity="0.85">Simply the Best</text>
   </g>
 </svg>

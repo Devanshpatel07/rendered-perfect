@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="460" height="110" fill="none">
-  <!-- EVEREST RENDERING SERVICES PTY LTD — Official Vector Logo with Navy Blue Background (#0d1b2e) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 250" width="320" height="250" fill="none">
+  <!-- EVEREST RENDERING SERVICES PTY LTD — Official Stacked Vector Logo with Navy Blue Background (#0d1b2e) -->
   
   <!-- NAVY BLUE BACKGROUND -->
-  <rect width="460" height="110" rx="10" fill="#0d1b2e"/>
-  
-  <!-- ICON GROUP (LEFT) -->
-  <g transform="translate(14, 2)">
+  <rect width="320" height="250" rx="16" fill="#0d1b2e"/>
+
+  <!-- ICON GROUP (CENTERED) -->
+  <g transform="translate(96, 10)">
     <!-- 1. Semi-Circular Arch -->
     <path d="M 16,58 A 48,48 0 0,1 112,58" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
 
@@ -33,15 +33,15 @@
     <path d="M 18,80 Q 64,73 110,82" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85"/>
   </g>
 
-  <!-- TYPOGRAPHY GROUP (RIGHT) -->
-  <g transform="translate(146, 5)">
+  <!-- TYPOGRAPHY GROUP (CENTERED TEXT) -->
+  <g text-anchor="middle" transform="translate(160, 115)">
     <!-- Primary Title: EVEREST RENDERING -->
-    <text x="0" y="44" font-family="'Montserrat', 'Inter', system-ui, -apple-system, sans-serif" font-weight="900" font-size="23" fill="#FFFFFF" letter-spacing="1.2">EVEREST RENDERING</text>
+    <text x="0" y="48" font-family="'Montserrat', 'Inter', system-ui, -apple-system, sans-serif" font-weight="900" font-size="21" fill="#FFFFFF" letter-spacing="1.2">EVEREST RENDERING</text>
 
     <!-- Secondary Title: SERVICES PTY LTD -->
-    <text x="0" y="67" font-family="'Montserrat', 'Inter', system-ui, -apple-system, sans-serif" font-weight="700" font-size="13.5" fill="#FFFFFF" letter-spacing="3.8" opacity="0.95">SERVICES PTY LTD</text>
+    <text x="0" y="74" font-family="'Montserrat', 'Inter', system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#FFFFFF" letter-spacing="3.5" opacity="0.95">SERVICES PTY LTD</text>
 
     <!-- Tagline: Simply the Best -->
-    <text x="0" y="87" font-family="'Playfair Display', 'Georgia', 'Times New Roman', serif" font-style="italic" font-weight="500" font-size="13" fill="#FFFFFF" letter-spacing="0.5" opacity="0.85">Simply the Best</text>
+    <text x="0" y="98" font-family="'Playfair Display', 'Georgia', 'Times New Roman', serif" font-style="italic" font-weight="500" font-size="13" fill="#FFFFFF" letter-spacing="0.5" opacity="0.85">Simply the Best</text>
   </g>
 </svg>

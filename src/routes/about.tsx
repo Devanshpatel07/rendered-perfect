@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import teamOnsite from "@/assets/team-onsite.jpg";
 import craftTrowel from "@/assets/craft-trowel.jpg";
 import projectMosman from "@/assets/project-mosman.jpg";
+import logo from "@/assets/everest-logo.svg";
+import logoNavy from "@/assets/everest-logo-navy.svg";
 import { EyebrowHeading } from "@/components/eyebrow-heading";
 
 export const Route = createFileRoute("/about")({
@@ -36,17 +38,22 @@ const values = [
 function AboutPage() {
   return (
     <>
-      <section className="pt-32 pb-12 sm:pt-40 sm:pb-16 md:pt-52 md:pb-32">
-        <div className="container-page">
-          <div className="eyebrow text-accent">About the company</div>
-          <h1 className="mt-5 sm:mt-6 font-display font-light text-[clamp(2.2rem,6vw,5.5rem)] leading-[0.98] tracking-tightest text-ink max-w-4xl">
-            Professional rendering contractors, bringing architectural concepts to life.
-          </h1>
-          <p className="mt-6 sm:mt-10 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-            At Everest Rendering Services, we specialise in acrylic-based renders, cement rendering,
-            texture finishes and blue board texture finishes. Every project — from a single feature wall
-            to a full facade — is executed with the highest level of craftsmanship and attention to detail.
-          </p>
+      <section className="pt-32 pb-12 sm:pt-40 sm:pb-16 md:pt-48 md:pb-24">
+        <div className="container-page flex flex-col md:flex-row md:items-center justify-between gap-12">
+          <div className="max-w-3xl">
+            <div className="eyebrow text-accent">About the company</div>
+            <h1 className="mt-5 sm:mt-6 font-display font-light text-[clamp(2.2rem,6vw,5.5rem)] leading-[0.98] tracking-tightest text-ink">
+              Professional rendering contractors, bringing architectural concepts to life.
+            </h1>
+            <p className="mt-6 sm:mt-10 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+              At Everest Rendering Services, we specialise in acrylic-based renders, cement rendering,
+              texture finishes and blue board texture finishes. Every project — from a single feature wall
+              to a full facade — is executed with the highest level of craftsmanship and attention to detail.
+            </p>
+          </div>
+          <div className="hidden lg:flex shrink-0 p-8 bg-[#0d1b2e] rounded-xl shadow-2xl">
+            <img src={logo} alt="Everest Rendering Services Official Logo" className="h-24 w-auto object-contain" width={460} height={110} />
+          </div>
         </div>
       </section>
 

@@ -7,8 +7,8 @@ export function SiteFooter() {
       <div className="container-page py-20">
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Link to="/" className="inline-flex items-center font-display text-background">
-              <img src={logo} alt="Everest Rendering Services logo" className="h-14 sm:h-16 w-auto" width={450} height={110} loading="lazy" />
+            <Link to="/" className="inline-block font-display text-background">
+              <img src={logo} alt="Everest Rendering Services logo" className="h-14 sm:h-16 w-auto object-contain" width={460} height={110} loading="lazy" />
             </Link>
 
             <p className="mt-8 max-w-md text-background/60 leading-relaxed">
