@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { z } from "zod";
 
 export const Route = createFileRoute("/contact")({
@@ -33,25 +33,20 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function triggerMailto(data: FormValues) {
-    const subject = encodeURIComponent(`New Enquiry: ${data.service || "Rendering Services"} - ${data.name}`);
-    const body = encodeURIComponent(
-      `Name: ${data.name}\n` +
-      `Email: ${data.email}\n` +
-      `Phone: ${data.phone || "Not provided"}\n` +
-      `Suburb: ${data.suburb || "Not provided"}\n` +
-      `Service: ${data.service || "General Enquiry"}\n\n` +
-      `Project Details:\n${data.message}`
-    );
-    window.location.href = `mailto:contact@everestrenderingservices.com.au?subject=${subject}&body=${body}`;
-  }
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.search.includes("sent=true")) {
+      setSent(true);
+    }
+  }, []);
 
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries()) as Record<string, string>;
     const parsed = schema.safeParse(data);
+
     if (!parsed.success) {
+      e.preventDefault();
       const errs: Errors = {};
       for (const issue of parsed.error.issues) {
         errs[issue.path[0] as keyof FormValues] = issue.message;
@@ -59,61 +54,45 @@ function ContactPage() {
       setErrors(errs);
       return;
     }
+
     setErrors({});
-    setIsSubmitting(true);
 
-    const targetEmail = "contact@everestrenderingservices.com.au";
     const web3Key = import.meta.env.VITE_WEB3FORMS_KEY || import.meta.env.VITE_CONTACT_KEY;
-
-    try {
-      if (web3Key) {
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            access_key: web3Key,
-            subject: `New Project Enquiry from ${parsed.data.name}`,
-            from_name: parsed.data.name,
-            email: parsed.data.email,
-            phone: parsed.data.phone || "Not provided",
-            suburb: parsed.data.suburb || "Not provided",
-            service: parsed.data.service || "General Enquiry",
-            message: parsed.data.message,
-          }),
+    if (web3Key) {
+      e.preventDefault();
+      setIsSubmitting(true);
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: web3Key,
+          subject: `New Project Enquiry from ${parsed.data.name}`,
+          from_name: parsed.data.name,
+          email: parsed.data.email,
+          phone: parsed.data.phone || "Not provided",
+          suburb: parsed.data.suburb || "Not provided",
+          service: parsed.data.service || "General Enquiry",
+          message: parsed.data.message,
+        }),
+      })
+        .then((res) => {
+          if (res.ok) {
+            setSent(true);
+          } else {
+            form.submit();
+          }
+        })
+        .catch(() => {
+          form.submit();
+        })
+        .finally(() => {
+          setIsSubmitting(false);
         });
-        if (!res.ok) throw new Error("Web3Forms response not ok");
-      } else {
-        const res = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
-          method: "POST",
-          headers: { 
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify({
-            _subject: `New Project Enquiry from ${parsed.data.name}`,
-            name: parsed.data.name,
-            email: parsed.data.email,
-            phone: parsed.data.phone || "Not provided",
-            suburb: parsed.data.suburb || "Not provided",
-            service: parsed.data.service || "General Enquiry",
-            message: parsed.data.message,
-            _template: "table"
-          }),
-        });
-        
-        if (!res.ok) {
-          triggerMailto(parsed.data);
-        }
-      }
-      setSent(true);
-    } catch (err) {
-      console.warn("Direct form API dispatch failed, opening mail client fallback:", err);
-      triggerMailto(parsed.data);
-      setSent(true);
-    } finally {
-      setIsSubmitting(false);
     }
+    // If no web3Key, allow native form POST submit to formsubmit.co!
   }
+
+  const nextUrl = typeof window !== "undefined" ? `${window.location.origin}/contact?sent=true` : "https://rendered-perfect.vercel.app/contact?sent=true";
 
   return (
     <>
@@ -172,7 +151,12 @@ function ContactPage() {
                 <div className="mt-6">
                   <button
                     type="button"
-                    onClick={() => setSent(false)}
+                    onClick={() => {
+                      setSent(false);
+                      if (typeof window !== "undefined") {
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                      }
+                    }}
                     className="text-xs uppercase tracking-widest text-accent hover:underline font-semibold"
                   >
                     ← Send another enquiry
@@ -180,7 +164,18 @@ function ContactPage() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={onSubmit} className="grid grid-cols-2 gap-5 sm:gap-6" noValidate>
+              <form 
+                action="https://formsubmit.co/contact@everestrenderingservices.com.au" 
+                method="POST" 
+                onSubmit={onSubmit} 
+                className="grid grid-cols-2 gap-5 sm:gap-6" 
+                noValidate
+              >
+                <input type="hidden" name="_subject" value="New Project Enquiry — Everest Rendering" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value={nextUrl} />
+
                 <Field label="Full name" name="name" error={errors.name} required className="col-span-2 md:col-span-1" />
                 <Field label="Email" name="email" type="email" error={errors.email} required className="col-span-2 md:col-span-1" />
                 <Field label="Phone" name="phone" type="tel" error={errors.phone} className="col-span-2 md:col-span-1" />
