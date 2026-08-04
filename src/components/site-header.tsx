@@ -116,16 +116,16 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[#0d1b2e] text-white backdrop-blur-xl border-t border-white/10 overflow-y-auto flex flex-col justify-between">
-          <div className="container-page pt-8 pb-4 flex flex-col items-center border-b border-white/10">
-            <img src={logo} alt="Everest Rendering Services logo" className="h-28 w-auto object-contain" width={320} height={250} />
+        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[#0d1b2e] text-white backdrop-blur-xl border-t border-white/10 overflow-y-auto flex flex-col justify-between z-50">
+          <div className="container-page pt-6 pb-4 flex flex-col items-center border-b border-white/10">
+            <img src={logo} alt="Everest Rendering Services logo" className="h-14 w-auto object-contain" width={320} height={110} />
           </div>
           <nav className="container-page py-4 flex flex-col gap-1">
             {nav.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className="py-4 text-xl font-display tracking-tight border-b border-line/60 flex items-center justify-between text-ink hover:text-accent transition-colors"
+                className="py-3.5 text-lg sm:text-xl font-display tracking-tight border-b border-white/10 flex items-center justify-between text-white/90 hover:text-accent transition-colors"
                 activeProps={{ className: "!text-accent font-medium" }}
               >
                 <span>{item.label}</span>
@@ -134,16 +134,16 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="container-page pb-12 pt-4 flex flex-col gap-3">
+          <div className="container-page pb-10 pt-4 flex flex-col gap-3">
             <Link
               to="/contact"
-              className="w-full inline-flex justify-center items-center gap-2 bg-accent text-accent-foreground px-5 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] shadow-lift"
+              className="w-full inline-flex justify-center items-center gap-2 bg-accent text-accent-foreground px-5 py-3.5 text-[12px] font-semibold uppercase tracking-[0.18em] shadow-lift active:scale-[0.99] transition-transform"
             >
               Get Free Quote
             </Link>
             <a
               href="tel:+61452109330"
-              className="w-full inline-flex justify-center items-center gap-2 border border-line bg-surface py-3.5 text-xs text-ink font-medium tracking-wider"
+              className="w-full inline-flex justify-center items-center gap-2 border border-white/20 bg-white/5 py-3.5 text-xs text-white font-medium tracking-wider hover:bg-white/10 transition-colors"
             >
               Call +61 452 109 330
             </a>
