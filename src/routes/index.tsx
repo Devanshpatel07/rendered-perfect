@@ -40,21 +40,25 @@ function Home() {
       {/* HERO */}
       <section className="relative min-h-[100svh] flex flex-col justify-end text-white overflow-hidden">
         <div className="absolute inset-0 -z-10 overflow-hidden">
+          {/* Mobile static hero image for instant phone loading */}
+          <img
+            src={heroFacade}
+            alt="Contemporary Australian home facade in warm-white acrylic render at golden hour"
+            className="h-full w-full object-cover scale-140 origin-center block md:hidden"
+            // @ts-ignore
+            fetchpriority="high"
+          />
+          {/* Desktop background video */}
           <video
             autoPlay
             muted
             loop
             playsInline
+            preload="metadata"
             poster={heroFacade}
-            className="h-full w-full object-cover scale-140 origin-center"
+            className="h-full w-full object-cover scale-140 origin-center hidden md:block"
           >
             <source src="/hero-video.mp4" type="video/mp4" />
-            {/* Fallback image if video is not supported */}
-            <img
-              src={heroFacade}
-              alt="Contemporary Australian home facade in warm-white acrylic render at golden hour"
-              className="h-full w-full object-cover scale-140 origin-center"
-            />
           </video>
           {/* Edge vignetting and gradient overlay to hide top/corner branding */}
           <div className="absolute inset-0 bg-gradient-to-b from-ink/90 via-ink/30 to-ink/80" />
