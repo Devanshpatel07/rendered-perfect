@@ -169,8 +169,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "the-kew-residence",
-    title: "The Kew Residence",
-    suburb: "Kew, VIC",
+    title: "Broadbeach Waters Villa",
+    suburb: "Broadbeach Waters, QLD",
     year: 2024,
     category: "Luxury Homes",
     service: "Acrylic Rendering",
@@ -189,8 +189,8 @@ export const projects: Project[] = [
   },
   {
     slug: "brighton-curves",
-    title: "Brighton Curves",
-    suburb: "Brighton, VIC",
+    title: "Surfers Paradise Curves",
+    suburb: "Surfers Paradise, QLD",
     year: 2023,
     category: "Texture Finish",
     service: "Texture Coating",
@@ -208,8 +208,8 @@ export const projects: Project[] = [
   },
   {
     slug: "st-kilda-workspace",
-    title: "St Kilda Workspace",
-    suburb: "St Kilda, VIC",
+    title: "Southport Commercial Hub",
+    suburb: "Southport, QLD",
     year: 2024,
     category: "Commercial",
     service: "Cement Rendering",
@@ -227,16 +227,16 @@ export const projects: Project[] = [
   },
   {
     slug: "the-mosman-residence",
-    title: "The Mosman Residence",
-    suburb: "Mosman, NSW",
+    title: "Burleigh Heads Residence",
+    suburb: "Burleigh Heads, QLD",
     year: 2023,
     category: "Luxury Homes",
     service: "Foam Panel Rendering",
     cover: "mosman",
     summary:
-      "A harbourside residence wrapped in an EPS foam-panel render system — thermal upgrade and architectural finish in a single move.",
+      "A coastal residence wrapped in an EPS foam-panel render system — thermal upgrade and architectural finish in a single move.",
     challenge:
-      "Integrate a modern render system with existing heritage cement work at the ground floor.",
+      "Integrate a modern render system with existing ground floor cement work.",
     solution:
       "Custom-cut EPS panels above a rendered ground-floor plinth, mesh reinforced at every junction, finished in a soft warm-white acrylic.",
     materials: ["EPS panels", "Base coat with mesh", "Acrylic topcoat"],
@@ -246,22 +246,22 @@ export const projects: Project[] = [
   },
   {
     slug: "hawthorn-heritage-repair",
-    title: "Hawthorn Heritage Repair",
-    suburb: "Hawthorn, VIC",
+    title: "Robina Facade Restoration",
+    suburb: "Robina, QLD",
     year: 2024,
     category: "Repairs",
     service: "Render Repairs",
     cover: "before",
     summary:
-      "Sympathetic remedial render on a 1920s facade — cracks stabilised, missing sections rebuilt, texture matched to the original hand-float.",
+      "Sympathetic remedial render on a residence facade — cracks stabilised, missing sections rebuilt, texture matched to the original hand-float.",
     challenge:
-      "Diagnose whether the cracking was structural or superficial, then match a 100-year-old sand-float finish.",
+      "Diagnose whether the cracking was structural or superficial, then match the sand-float finish.",
     solution:
       "Engineer's report ruled out structural movement; we cut back to substrate, reinstated with a lime-cement mix and floated the texture to match by hand.",
     materials: ["Lime-cement mix", "Matched pigments", "Breathable sealer"],
     timeline: "3 weeks",
     quote: "You cannot see where the repair ends. Which is the point.",
-    quoteAuthor: "Heritage Homeowner",
+    quoteAuthor: "Gold Coast Homeowner",
   },
   {
     slug: "trowel-detail-study",
@@ -302,38 +302,73 @@ export const testimonials = [
   },
 ];
 
+export const companyDetails = {
+  name: "Everest Rendering Services Pty Ltd",
+  qbccLicense: "15455473",
+  abn: "98 676 120 166",
+  acn: "676 120 166",
+  phone: "+61 452 109 330",
+  email: "contact@everestrenderingservices.com.au",
+  address: "Southport, QLD, 4215",
+  hours: "Mon - Sat: 09am - 08pm",
+  quoteTurnaround: "24 hr",
+  instagramUrl: "https://www.instagram.com/everest_renderingservices",
+  facebookUrl: "https://www.facebook.com/Everestrendering",
+  linkedinUrl: "https://www.linkedin.com/company/everest-rendering-services-pyt-ltd/",
+};
+
 export const faqs = [
   {
     q: "What areas do you service?",
-    a: "We are based in Southport on the Gold Coast and take on projects across South East Queensland — from Brisbane down to the Tweed.",
+    a: "We are based in Southport on the Gold Coast and service projects across South East Queensland — including Gold Coast, Brisbane, Logan, Redlands, and Ipswich down to Tweed Heads.",
   },
   {
     q: "Are you licensed and insured?",
-    a: "Yes. Everest Rendering Services is a QBCC-licensed company and fully insured.",
+    a: "Yes. Everest Rendering Services Pty Ltd is a fully QBCC-licensed contractor (QBCC License No. 15455473, ABN: 98 676 120 166, ACN: 676 120 166) and completely insured.",
   },
   {
     q: "What kinds of render do you offer?",
-    a: "Acrylic-based renders, traditional cement rendering, texture finishes and blue board texture finishes — for both new builds and renovations.",
+    a: "Acrylic-based renders, traditional cement rendering, texture finishes and blue board texture finishes — for both new residential builds and facade renovations.",
+  },
+  {
+    q: "How fast can I get a quote?",
+    a: "We provide free estimates and itemised quotes within a 24-hour turnaround time.",
   },
   {
     q: "Can you match an existing render?",
-    a: "In most cases, yes. We mix on site to match colour and grain as closely as possible before starting the main work.",
+    a: "In most cases, yes. We test and mix on site to match colour and grain texture as closely as possible before starting main application.",
   },
   {
     q: "How do I get a quote?",
-    a: "Call +61 452 109 330, email contact@everestrenderingservices.com.au, or use the enquiry form and we'll respond within one business day.",
-  },
-  {
-    q: "How long does a typical job take?",
-    a: "It depends on the size and finish, but we'll give you a firm timeline with every quote and stick to it.",
+    a: "Call +61 452 109 330, email contact@everestrenderingservices.com.au, or fill in our enquiry form for a quick quote within 24 hours.",
   },
 ];
 
 export const stats = [
-  { label: "QBCC licensed", value: "✓" },
-  { label: "Based on the", value: "Gold Coast" },
-  { label: "Free quotes", value: "24 hr" },
-  { label: "Serving", value: "SE QLD" },
+  {
+    number: "01",
+    value: "15455473",
+    label: "QBCC licensed",
+    subtext: "License No: 15455473",
+  },
+  {
+    number: "02",
+    value: "Gold Coast",
+    label: "Based on the",
+    subtext: "Southport HQ, QLD 4215",
+  },
+  {
+    number: "03",
+    value: "24 hr",
+    label: "Free quotes",
+    subtext: "Fast estimate turnaround",
+  },
+  {
+    number: "04",
+    value: "SE QLD",
+    label: "Serving",
+    subtext: "South East Queensland",
+  },
 ];
 
 export const process = [

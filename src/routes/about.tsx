@@ -110,12 +110,14 @@ function AboutPage() {
             <EyebrowHeading eyebrow="Why choose us" title={<>The reasons people choose Everest.</>} />
             <ul className="mt-10 space-y-4 text-muted-foreground">
               {[
-                "QBCC-licensed rendering contractors",
-                "Premium-grade materials selected for Australian conditions",
-                "Skilled, continuously trained applicators",
+                "QBCC-licensed rendering contractors (License No. 15455473)",
+                "Registered company (ABN: 98 676 120 166 · ACN: 676 120 166)",
+                "Based on the Gold Coast (Southport HQ) serving all SE QLD",
+                "Fast 24-hour turnaround on free estimates & itemised quotes",
+                "Premium-grade materials selected for Australian weather conditions",
+                "Skilled, continuously trained applicators across all 8 render disciplines",
                 "Flexible booking to suit your build programme",
-                "Prompt, proactive customer service",
-                "Direct communication from first call to handover",
+                "Direct communication from first call through to handover",
               ].map((x) => (
                 <li key={x} className="flex gap-4">
                   <span className="text-accent mt-1">—</span>

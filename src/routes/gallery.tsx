@@ -55,11 +55,25 @@ function GalleryPage() {
   return (
     <>
       <section className="pt-32 pb-12 sm:pt-40 sm:pb-16 md:pt-52 md:pb-20">
-        <div className="container-page">
-          <div className="eyebrow text-accent">Gallery</div>
-          <h1 className="mt-5 sm:mt-6 font-display font-light text-[clamp(2.2rem,6vw,5.5rem)] leading-[0.98] tracking-tightest text-ink max-w-4xl">
-            An archive of surfaces and shadows.
-          </h1>
+        <div className="container-page flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div className="eyebrow text-accent">Selected Works & Gallery</div>
+            <h1 className="mt-5 sm:mt-6 font-display font-light text-[clamp(2.2rem,6vw,5.5rem)] leading-[0.98] tracking-tightest text-ink max-w-4xl">
+              An archive of surfaces and shadows.
+            </h1>
+            <p className="mt-4 text-muted-foreground text-sm sm:text-base max-w-xl">
+              For real-time job updates, on-site craftsmanship videos, and latest project photos, visit our Instagram feed.
+            </p>
+          </div>
+          <a
+            href="https://www.instagram.com/everest_renderingservices"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-ink text-background px-6 py-3.5 text-xs font-semibold uppercase tracking-widest hover:bg-accent transition-colors self-start md:self-end shrink-0"
+          >
+            <span>Instagram</span>
+            <span>↗</span>
+          </a>
         </div>
       </section>
 

@@ -45,8 +45,7 @@ function Home() {
             src={heroFacade}
             alt="Contemporary Australian home facade in warm-white acrylic render at golden hour"
             className="h-full w-full object-cover scale-140 origin-center block md:hidden"
-            // @ts-ignore
-            fetchpriority="high"
+            fetchPriority="high"
           />
           {/* Desktop background video */}
           <video
@@ -68,9 +67,9 @@ function Home() {
           <div className="max-w-4xl reveal">
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
               <span className="inline-flex items-center gap-2 border border-white/25 bg-white/10 backdrop-blur-sm px-3 py-1.5 eyebrow text-white/85 text-[0.65rem] sm:text-[0.72rem]">
-                <span className="size-1.5 rounded-full bg-accent" /> QBCC Licensed Company
+                <span className="size-1.5 rounded-full bg-accent" /> QBCC Licensed Contractor · License No. 15455473
               </span>
-              <span className="eyebrow text-white/60 text-[0.65rem] sm:text-[0.72rem]">Southport · Gold Coast · QLD</span>
+              <span className="eyebrow text-white/60 text-[0.65rem] sm:text-[0.72rem]">Southport · Gold Coast · SE QLD</span>
             </div>
             <h1 className="mt-5 sm:mt-6 font-display font-light text-[clamp(2.15rem,6.5vw,6.5rem)] leading-[0.98] tracking-tightest">
               Professional and expert
@@ -105,11 +104,12 @@ function Home() {
       {/* STATS STRIP */}
       <section className="border-y border-line bg-background">
         <div className="container-page py-8 sm:py-10 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-          {stats.map((s, i) => (
-            <div key={s.label} className="flex flex-col">
-              <span className="eyebrow text-accent text-[0.65rem] sm:text-[0.72rem]">{String(i + 1).padStart(2, "0")}</span>
-              <span className="mt-2 font-display text-3xl sm:text-4xl md:text-5xl tracking-tightest text-ink">{s.value}</span>
-              <span className="mt-1 text-xs sm:text-sm text-muted-foreground">{s.label}</span>
+          {stats.map((s) => (
+            <div key={s.number} className="flex flex-col">
+              <span className="eyebrow text-accent text-[0.65rem] sm:text-[0.72rem]">{s.number}</span>
+              <span className="mt-2 font-display text-2xl sm:text-3xl md:text-4xl tracking-tightest text-ink font-normal">{s.value}</span>
+              <span className="mt-1 text-xs sm:text-sm font-medium text-ink/90">{s.label}</span>
+              {s.subtext && <span className="text-[11px] text-muted-foreground mt-0.5">{s.subtext}</span>}
             </div>
           ))}
         </div>
@@ -119,10 +119,33 @@ function Home() {
       <section className="py-24 md:py-32">
         <div className="container-page">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-            <EyebrowHeading eyebrow="Selected Works" title={<>Recent facades,<br />chosen from the archive.</>} />
-            <Link to="/projects" className="eyebrow text-ink link-underline self-start md:self-end">
-              View the portfolio →
-            </Link>
+            <div>
+              <EyebrowHeading eyebrow="Selected Works" title={<>Recent facades & Instagram portfolio.</>} />
+              <p className="mt-2 text-sm text-muted-foreground">
+                Explore our ongoing projects and finishes on{" "}
+                <a
+                  href="https://www.instagram.com/everest_renderingservices"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-accent hover:underline font-medium inline-flex items-center gap-1"
+                >
+                  Instagram ↗
+                </a>
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-4 self-start md:self-end">
+              <a
+                href="https://www.instagram.com/everest_renderingservices"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-ink text-background px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider hover:bg-accent transition-colors"
+              >
+                Instagram ↗
+              </a>
+              <Link to="/projects" className="eyebrow text-ink link-underline">
+                View the portfolio →
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-12 gap-6 md:gap-10">
@@ -308,8 +331,8 @@ function Home() {
           <div className="md:col-span-6 md:col-start-7">
             <div className="eyebrow text-accent">Trusted by</div>
             <div className="mt-10 space-y-16">
-              {testimonials.map((t) => (
-                <figure key={t.author} className="border-t border-white/15 pt-8">
+              {testimonials.map((t, idx) => (
+                <figure key={`${t.author}-${idx}`} className="border-t border-white/15 pt-8">
                   <blockquote className="font-display text-2xl md:text-3xl leading-snug tracking-tighter text-background">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>

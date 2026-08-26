@@ -15,7 +15,11 @@ export function SiteFooter() {
               QBCC-licensed rendering contractors based on the Gold Coast, delivering acrylic, cement,
               texture and blue board finishes for homes and businesses across South East Queensland.
             </p>
-            <div className="mt-10 grid grid-cols-2 gap-6 max-w-md">
+            <div className="mt-4 text-xs text-background/50 space-y-0.5 font-mono">
+              <p>QBCC License No: <span className="text-background/80">15455473</span></p>
+              <p>ABN: <span className="text-background/80">98 676 120 166</span> | ACN: <span className="text-background/80">676 120 166</span></p>
+            </div>
+            <div className="mt-8 grid grid-cols-2 gap-6 max-w-md">
               <div>
                 <div className="eyebrow text-background/50">Phone</div>
                 <a href="tel:+61452109330" className="mt-2 block text-background link-underline">
@@ -72,7 +76,7 @@ export function SiteFooter() {
 
         <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-[11px] uppercase tracking-[0.18em] text-background/50">
           <span>© {new Date().getFullYear()} Everest Rendering Services Pty Ltd</span>
-          <span>QBCC Licensed</span>
+          <span>QBCC License No. 15455473</span>
         </div>
       </div>
     </footer>
